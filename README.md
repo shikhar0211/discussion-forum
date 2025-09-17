@@ -170,3 +170,4 @@ UPDATE users SET role = 'admin' WHERE email = 'bob@example.com';
 
 ## License
 This project is provided as-is without a specific license. Add a license file if you plan to distribute.
+

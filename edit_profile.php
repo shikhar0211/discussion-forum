@@ -1,7 +1,7 @@
 <?php
 include 'includes/db.php';
+include 'includes/auth.php'; // must be logged in BEFORE any output
 include 'includes/header.php';
-include 'includes/auth.php'; // must be logged in
 
 $user_id = $_SESSION['user_id'];
 

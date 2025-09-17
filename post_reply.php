@@ -1,6 +1,6 @@
 <?php
 include 'includes/db.php';
-session_start();
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_SESSION['user_id'])) {
     $topic_id = intval($_POST['topic_id']);

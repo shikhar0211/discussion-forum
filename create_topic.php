@@ -1,7 +1,7 @@
 <?php
 include 'includes/db.php';
+include 'includes/auth.php'; // ensures user is logged in BEFORE any output
 include 'includes/header.php';
-include 'includes/auth.php'; // ensures user is logged in
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = htmlspecialchars($_POST['title']);

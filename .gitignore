@@ -1,0 +1,34 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# PHP / Composer (in case added later)
+vendor/
+composer.lock
+
+# Node (if ever added)
+node_modules/
+
+# Env / secrets
+.env
+.env.*
+
+# Cache / uploads (none now, but safe defaults)
+cache/
+storage/
+uploads/
+*.cache
+
+# XAMPP / phpMyAdmin exports
+*.sql
+*.sql.gz
+*.bak
+
+# Build artifacts
+/dist/
+/build/

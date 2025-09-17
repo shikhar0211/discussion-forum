@@ -1,6 +1,6 @@
 <?php
 include 'includes/db.php';
-include 'includes/header.php';
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = htmlspecialchars($_POST['email']);
@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
+<?php include 'includes/header.php'; ?>
 <h2 class="h4 mb-3">Login</h2>
 
 <?php if (!empty($error)): ?>

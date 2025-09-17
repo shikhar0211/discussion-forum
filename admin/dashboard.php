@@ -1,13 +1,17 @@
 <?php
 include '../includes/db.php';
-include '../includes/header.php';
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
 
-// Check if logged in and admin
+// Check if logged in and admin BEFORE any output
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    echo "<div class=\"alert alert-danger\">You are not authorized to access this page.</div>";
-    include '../includes/footer.php';
+    header('Location: ../login.php');
     exit;
 }
+
+// Determine which section to show (before rendering nav)
+$section = $_GET['section'] ?? 'users';
+
+include '../includes/header.php';
 ?>
 
 <div class="d-flex align-items-center justify-content-between mb-4">
@@ -26,7 +30,6 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 </div>
 
 <?php
-$section = $_GET['section'] ?? 'users';
 
 // Manage Users
 if ($section === 'users') {
