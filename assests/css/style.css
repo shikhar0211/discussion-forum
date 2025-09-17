@@ -1,0 +1,151 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f7fb;
+    color: #2b2f36;
+}
+
+/* Header */
+header {
+    /* Navbar is styled by Bootstrap; keep minimal overrides if needed */
+}
+
+header h1 a { text-decoration: none; }
+
+header nav a { text-decoration: none; }
+
+header form input { }
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 24px auto;
+}
+
+.card-forum {
+    background: #ffffff;
+    border: 1px solid #e6e8ec;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(18, 38, 63, 0.05);
+}
+
+.card-forum .card-header {
+    background: linear-gradient(180deg, #0d6efd 0%, #0b5ed7 100%);
+    color: #fff;
+}
+
+.chip {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #eef3ff;
+    color: #0b5ed7;
+    border: 1px solid #d6e4ff;
+    border-radius: 999px;
+}
+
+/* Footer */
+footer {
+}
+
+/* Buttons */
+button { cursor: pointer; }
+
+/* Forms */
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+    border: 1px solid #d9dde3;
+    border-radius: 8px;
+}
+
+/* Tables (Admin Dashboard) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 10px 12px;
+    border: 1px solid #e6e8ec;
+}
+
+table th {
+    background: #f8fafc;
+}
+
+/* Bootstrap color customization via CSS variables */
+:root {
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #12b886;
+    --bs-info: #4dabf7;
+    --bs-warning: #fcc419;
+    --bs-danger: #f03e3e;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0f1115;
+    --bs-body-color: #dee2e6;
+    --bs-card-bg: #161a22;
+    --bs-card-border-color: #2a2f3a;
+    --bs-border-color: #2a2f3a;
+    --bs-emphasis-color: #fff;
+    --bs-secondary-bg: #161a22;
+    --bs-tertiary-bg: #2a2f3a;
+    --bs-navbar-bg: #161a22;
+    --bs-navbar-color: #dee2e6;
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+    --bs-navbar-toggler-border-color: #2a2f3a;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-footer-bg: #161a22;
+    --bs-footer-color: #dee2e6;
+}
+
+/* Ensure theme applies to all elements */
+[data-bs-theme="dark"] body {
+    background-color: var(--bs-body-bg) !important;
+    color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: var(--bs-card-bg) !important;
+    border-color: var(--bs-card-border-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: var(--bs-navbar-bg) !important;
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link {
+    color: var(--bs-navbar-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+    color: var(--bs-navbar-hover-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-brand {
+    color: var(--bs-navbar-brand-color) !important;
+}
+
+[data-bs-theme="dark"] .navbar-brand:hover {
+    color: var(--bs-navbar-brand-hover-color) !important;
+}
+
+[data-bs-theme="dark"] footer {
+    background-color: var(--bs-footer-bg) !important;
+    color: var(--bs-footer-color) !important;
+}
+
+/* Helpers */
+.shadow-soft { box-shadow: 0 0.5rem 1rem rgba(0,0,0,.08); }
+.rounded-12 { border-radius: 12px; }
